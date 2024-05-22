@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c{
+            background-color: greenyellow;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <input type="text" class="c">
+    <input type="text" class="c">
+    <input type="text" class="c">
+    <button id="btn" onclick="info()">CLICK</button>
+
+    <script>
+        const btn=document.getElementById("btn");
+    
+        const c=document.getElementsByClassName("c");//엘리먼트를 모아놓은 배열 벨류존재x
+        
+        function info(){
+            for(let i=0;i<c.length;i++){
+                console.log(c[i].value);
+
+        }
+
+        }
+
+
+    </script>
+</body>
+</html>

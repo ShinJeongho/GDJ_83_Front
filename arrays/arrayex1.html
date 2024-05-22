@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" value="1" name="ch" id="checkALL">
+    <input type="checkbox" value="1" name="ch" class="a">
+    <input type="checkbox" value="2" name="ch" class="a">
+    <input type="checkbox" value="3"  name="ch" class="a" >
+    <input type="checkbox" value="4" name="ch" class="a">
+    <button onclick="fo()">CLICK</button>
+
+    <script>
+        const a=document.getElementsByClassName("a");
+        const checkaLL = document.getElementById('checkALL');
+       
+    for(let b=0;b<a.length;b++){
+        a[b].checkaLL("CLICK",function(){
+            let 
+        })
+
+    }
+
+
+
+        function fo(){
+            for(let i=0;i<a.length;i++){
+                console.log(a[i].checked);  
+            }
+        }
+        
+      
+        a[1].checked=false;
+        
+
+        
+    </script>
+
+</body>
+</html>
