@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .c2{
+      
+        border: 2px solid red;
+        
+    }
+</style>
+<body>
+    <!-- 다입력해야하고 입력안하면 빨간색 나오게 -->
+    <div>
+        <input class="c1" type="text">
+    </div>
+    <div>
+        <input class="c1" type="text">
+    </div>
+    <div>
+        <input class="c1" type="text">
+    </div>
+    <div>
+        <input class="c1" type="text">
+    </div>
+    <div>
+        <button onclick="allchange()">CLICK</button>
+    </div>
+
+    <script>
+        const c1=document.getElementsByClassName("c1"); //배열
+        
+
+        function allchange(){
+           for(let i=0;i<c1.length;i++){
+           if(c1[i].value==""){      //값이 비어있으면 빨간색
+                c1[i].classList.add("c2");
+            console.log("빨간색")
+            
+
+           }else{
+            c1[i].classList.remove("c2");
+           }
+         }
+  
+            
+       }
+
+
+    </script>
+
+</body>
+</html>
