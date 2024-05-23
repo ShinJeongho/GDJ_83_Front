@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{
+            text-decoration: line-through;
+        } */
+    </style>
+</head>
+<body>
+    <div id="result">
+        <!-- <div>
+            <input type="checkbox">바나나
+        </div> -->
+
+
+    </div>
+
+    <script>
+    
+    
+    const ar=['바나나','수박', '참외','사과','망고'];
+
+    for(let j=0; j<ar.length;j++){         //<div><input type="checkbox"></div>  초기화 하고 바나나,수박,참외,사과,망고만 바뀜
+
+        let a=document.createElement("div"); //<div></div>
+        let i=document.createElement("input"); //<div> <input> </div>
+        i.type="checkbox" // <input type="checkbox">
+        a.appendChild(i);// <div><input type="checkbox"></div>
+        
+        a.append(ar[j]); //바나나 수박 참외 사과 망고 순서대로 표시
+
+        result.append(a);     //div에 결과 표시
+    }
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
