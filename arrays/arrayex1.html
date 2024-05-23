@@ -9,21 +9,38 @@
     <input onclick="info()" type="checkbox" value="1" name="ch" id="checkALL">
     <input type="checkbox" value="1" name="ch" class="a">
     <input type="checkbox" value="2" name="ch" class="a">
-    <input type="checkbox" value="3"  name="ch" class="a" >
+    <input type="checkbox" value="3"  name="ch" class="a">
     <input type="checkbox" value="4" name="ch" class="a">
     <button onclick="info()">CLICK</button>
 
     <script>
         const a=document.getElementsByClassName("a");
         const checkALL=document.getElementById("checkALL");
+
+              
+        for(let i=0; i<a.length;i++){
+            a[i].addEventListener("click",function(){
+                let flag=true;
+                for(let g=0;g<a.length;g++){
+                    if(!a[g].checked){
+                        flag=false;
+                        break;
+                    }
+                }
+            
+                    
+                  checkALL.checked=flag;  
+              })
+          }
         
-
-
-        function info(){//{  //클릭하면 다켜지고 클릭하면 다꺼지고 
-       
-            for(let i=0;i<a.length;i++)
+          function info(){//{  //클릭하면 다켜지고 클릭하면 다꺼지고 
+            //누가 체크되던 다검사하기 
+           for(let i=0;i<a.length;i++){
                a[i].checked=checkALL.checked;
+          }
         }
+        
+        
        
        
        
