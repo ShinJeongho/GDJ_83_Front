@@ -6,29 +6,43 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="checkbox" value="1" name="ch" id="checkALL">
+    <input onclick="info()" type="checkbox" value="1" name="ch" id="checkALL">
     <input type="checkbox" value="1" name="ch" class="a">
     <input type="checkbox" value="2" name="ch" class="a">
     <input type="checkbox" value="3"  name="ch" class="a" >
     <input type="checkbox" value="4" name="ch" class="a">
-    <button onclick="fo()">CLICK</button>
+    <button onclick="info()">CLICK</button>
 
     <script>
         const a=document.getElementsByClassName("a");
+        const checkALL=document.getElementById("checkALL");
         
 
 
-        function fo(){  //클릭하면 다켜지고 클릭하면 다꺼지고 
-            if(checkALL.)
-            
-            for(let i=0;i<a.length;i++){
-                console.log(a[i].checked);
-                a[i].checked=true;  
-            }
+        function info(){//{  //클릭하면 다켜지고 클릭하면 다꺼지고 
+       
+            for(let i=0;i<a.length;i++)
+               a[i].checked=checkALL.checked;
         }
+       
+       
+       
+       
+            //     if(checkALL.checked){
+        //         for(let i=0;i<a.length;i++){
+        //            a[i].checked=true;  
+                
+        //             }
+            
+        // }else{
+        //     for(let i=0;i<a.length;i++)
+        //         a[i].checked=checkALL.checked;
+        //     }
+
+        // }
+        
         
       
-        a[1].checked=false;
         
 
         

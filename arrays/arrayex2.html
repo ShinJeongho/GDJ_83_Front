@@ -7,20 +7,27 @@
 </head>
 <body>
     <div>
-        <img src="/images/ja1.jpeg" id="a1">
+        <img src="/images/ja1.jpeg" id="result">
 
     </div>
-    <button onclick="click()">NEXT</button>
+    <button onclick="change()">NEXT</button>
 
     <script> //next 누르면 배열에서 다음사진이 나오게만들기 맨마지막 마지막창 맨처음
+        
+        const result=document.getElementById("result");
         let ar=["ja1.jpeg","ja2.jpeg","ja3.jpeg","ja4.jpeg","ja5.jpeg"];
+        let i=1;
         
-        
-        const a1=document.getElementById("a1");
-        
-        function click(){
-            for(let a=0;a<=ar.length;a++)
-            console.log(a);
+                
+        function change(){
+            if(i>4){
+                alert('마지막 이미지');
+                i=0;
+            }
+            
+            result.src="/images/"+ar[i]; //배열에서 하나꺼내는 코드
+            i++;
+            
             
         }
 
