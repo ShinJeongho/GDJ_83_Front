@@ -36,11 +36,14 @@
     <script>
         const input=document.getElementById("input");
         const addbuttion=document.getElementById("addbuttion");
+        const result=document.getElementById("result");
+        const deletebutton=document.getElementById("click");
         
         addbuttion.addEventListener("click",function(){
             let a=document.createElement("div"); 
             let b=document.createElement("input");
             b.type="checkbox";
+            b.classList.add("flag");
             let c=document.createElement("span");
             let d=document.createTextNode(input.value);
             
@@ -53,23 +56,26 @@
             
                     
         })
-        const click=document.getElementById("click");
-        const flag=document.getElementsByClassName("flag");
+       
+        deletebutton.addEventListener("click", function() {
+    const checkboxes = document.querySelectorAll(".flag");
+    checkboxes.forEach(function(checkbox) {
+        if (checkbox.checked) {
+            checkbox.parentElement.remove();
+        }
+    });
+});
 
-        click.addEventListener("click",function(){
-            let ar=[];
-            for(let i=0;i<flag.length;i++){
-                if(flag[i].checked){
-                    ar.push(flag[i].getAttribute("data-del-num"));
-                }
+
+    result.addEventListener("change",function(){
+        if(e.target && e.target.classList.contains("flag")){
+            if(e.target.checked){
+                span.style="line-through";
+            }else{
+                span.style="none";
             }
-            for(let i=0;i<ar.length;i++){
-                document.getElementById(ar[i]).remove();
-            }
-
-        })
-
-
+        }
+    })
 
 
 
