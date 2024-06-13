@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="f1">
+    <input type="file" id="f1">
+    <input type="file" id="f1">
+    <button id="btn">CLICK</button>
+
+    <Script>
+        const f1=document.getElementById("f1");
+        const btn=document.getElementById("btn");
+        const files = ["gif","jpg","png","jpeg"];
+
+        btn.addEventListener("click",function(){
+            let v = f1.value;
+            v=v.substring(v.lastIndexOf(".")+1);
+            let flag=false;
+            for(let i=0;i<files.length;i++){
+                if(v==files[i]){
+                    flag=true;
+                    break;
+                }
+            }
+            if(flag){
+                console.log("이미지 파일이다")
+            }else{
+                console.log("이미지 파일 아님")
+            }
+
+            console.log(v);
+        })
+     
+
+
+
+    </Script>
+</body>
+</html>     
